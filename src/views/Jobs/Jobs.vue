@@ -1,9 +1,9 @@
 <template>
   <h1>Jobs</h1>
   <div v-for="(job, index) in jobs" :key="index">
-    <h2>
+    <router-link :to="{}">
       {{ job.title }}
-    </h2>
+    </router-link>
   </div>
 </template>
 
