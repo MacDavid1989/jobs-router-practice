@@ -5,12 +5,28 @@
     <router-link :to="{ name: 'Jobs' }">Jobs</router-link>
   </div>
   <router-view />
+
+  <button @click="redirect">Redirect</button>
+  <button @click="back">Go Back</button>
+  <button @click="forward">Go Forward</button>
 </template>
 
 <script>
 export default {
   name: "App",
+  methods: {
+    redirect() {},
+    back() {},
+    forward() {},
+  },
 };
 </script>
 
-<style></style>
+<style scoped>
+button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+</style>
