@@ -23,6 +23,11 @@ const routes = [
     component: JobDetails,
     props: true,
   },
+  // redirect
+  {
+    path: "/home",
+    redirect: "/",
+  },
 ];
 
 const router = createRouter({
