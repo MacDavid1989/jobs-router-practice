@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { Home, About, Jobs, JobDetails } from "../views";
+import { Home, About, NotFound, Jobs, JobDetails } from "../views";
 
 const routes = [
   {
@@ -27,6 +27,12 @@ const routes = [
   {
     path: "/home",
     redirect: "/",
+  },
+  // catchall 404
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 
