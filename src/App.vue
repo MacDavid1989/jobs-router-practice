@@ -15,9 +15,17 @@
 export default {
   name: "App",
   methods: {
-    redirect() {},
-    back() {},
-    forward() {},
+    redirect() {
+      this.$router.push({
+        name: "Home",
+      });
+    },
+    back() {
+      this.$router.go(-1);
+    },
+    forward() {
+      this.$router.go(1);
+    },
   },
 };
 </script>
