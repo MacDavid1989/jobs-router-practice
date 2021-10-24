@@ -1,6 +1,6 @@
 <template>
   <h1>Jobs</h1>
-  <div v-for="(job, index) in jobs" :key="index">
+  <div v-for="(job, index) in jobs" :key="index" class="job">
     <router-link :to="{ name: 'JobDetails', params: { id: job.id } }">
       <h2>
         {{ job.title }}
@@ -24,4 +24,20 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.job h2 {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 600px;
+  cursor: pointer;
+  color: #444;
+}
+.job h2:hover {
+  background: #ddd;
+}
+.job a {
+  text-decoration: none;
+}
+</style>
